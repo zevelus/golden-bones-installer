@@ -1,0 +1,4 @@
+{
+	"ticksBetweenActions": 2,
+	"tradeBlockBehavior": "DAMAGEABLE"
+}

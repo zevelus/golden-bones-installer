@@ -1,0 +1,17 @@
+{
+  "timer": {
+    "randomDelay": true,
+    "maxDelay": 80
+  },
+  "fallback": {
+    "dimension": true,
+    "creative": true
+  },
+  "misc": {
+    "musicDontPause": true,
+    "musicQueue": 10,
+    "musicCategoryStart": "default",
+    "miscEventChance": "HALF",
+    "volumeIncrement": 5
+  }
+}
