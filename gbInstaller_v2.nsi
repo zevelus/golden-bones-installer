@@ -197,7 +197,7 @@ SectionGroup "Rendering"
 # bobby
   Section "Bobby"
     SectionInstType ${IT_DEFA} ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\bobby-5.2.3+mc1.21.jar
+    File files\mcFiles\optional\mods\bobby-5.2.4+mc1.21.jar
 	DetailPrint "Bobby installed."
   SectionEnd
   
@@ -229,7 +229,7 @@ SectionGroup "UI"
   Section /o "BetterF3 Menu"
     SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
     # define what to install and place it in the output path
-    File files\mcFiles\optional\mods\BetterF3-11.0.1-Fabric-1.21.jar
+    File files\mcFiles\optional\mods\BetterF3-11.0.2-Fabric-1.21.1.jar
 	DetailPrint "BetterF3 installed."
   SectionEnd
   
@@ -332,7 +332,7 @@ SectionGroup "Utility and Control"
   # litematica
   Section /o "Litematica"
     SectionInstType ${IT_FULL}
-    File files\mcFiles\optional\mods\litematica-fabric-1.21-0.19.1.jar
+    File files\mcFiles\optional\mods\litematica-fabric-1.21-0.19.3-sakura.2.jar
 	DetailPrint "Litematica installed."
   SectionEnd
   
@@ -353,7 +353,7 @@ SectionGroup "Utility and Control"
   # peek
   Section /o "Peek"
     SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\peek-fabric-1.21.1-1.3.4.jar
+    File files\mcFiles\optional\mods\peek-fabric-1.21.1-1.3.5.jar
 	DetailPrint "Peek installed."
   SectionEnd
   
