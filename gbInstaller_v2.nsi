@@ -233,14 +233,6 @@ SectionGroup "UI"
 	DetailPrint "BetterF3 installed."
   SectionEnd
   
-  # raised hotbar
-  Section /o "Raised"
-    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
-    # define what to install and place it in the output path
-    File files\mcFiles\optional\mods\raised-fabric-1.21-4.0.0.jar
-	DetailPrint "Raised installed."
-  SectionEnd
-  
   # dynamic crosshair
   Section /o "Dynamic Crosshair"
     SectionInstType ${IT_FULL}
@@ -390,38 +382,34 @@ Section "-Config"
   DetailPrint "Installing default resourcepack..."
   SetOutPath $INSTDIR\resourcepacks
   File files\mcFiles\core\resourcepacks\*.zip
-  DetailPrint "Resourcepack installed."
+  DetailPrint "Resourcepacks installed."
   DetailPrint "Configuring..."
-  SetOutPath $INSTDIR\config\.puzzle_cache
-  File files\mcFiles\core\config\.puzzle_cache\mojangstudios.png
+ # SetOutPath $INSTDIR\config\.puzzle_cache
+  #File files\mcFiles\core\config\.puzzle_cache\mojangstudios.png
   SetOverwrite off
-  SetOutPath $INSTDIR\config\carpet
-  File files\mcFiles\core\config\carpet\default_carpet.conf
-  SetOutPath $INSTDIR\config\music_control
-  File files\mcFiles\core\config\music_control\*.json
-  SetOutPath $INSTDIR\config\NoChatReports
-  File files\mcFiles\core\config\NoChatReports\NCR-Client.json
-  SetOutPath $INSTDIR\config\peek
-  File files\mcFiles\core\config\peek\peek.properties
-  SetOutPath $INSTDIR\config\respackopts
-  File files\mcFiles\core\config\respackopts\_respackopts.conf
-  SetOutPath $INSTDIR\config\sound_physics_remastered
-  File files\mcFiles\core\config\sound_physics_remastered\soundphysics.properties
-  SetOutPath $INSTDIR\config\status
-  File files\mcFiles\core\config\status\state-client.properties
-  SetOutPath $INSTDIR\config\yosbr
-  File files\mcFiles\core\config\yosbr\options.txt
+ # SetOutPath $INSTDIR\config\carpet
+ # File files\mcFiles\core\config\carpet\default_carpet.conf
+ # SetOutPath $INSTDIR\config\music_control
+ # File files\mcFiles\core\config\music_control\*.json
+#  SetOutPath $INSTDIR\config\NoChatReports
+ # File files\mcFiles\core\config\NoChatReports\NCR-Client.json
+ # SetOutPath $INSTDIR\config\peek
+#  File files\mcFiles\core\config\peek\peek.properties
+  #SetOutPath $INSTDIR\config\respackopts
+ # File files\mcFiles\core\config\respackopts\_respackopts.conf
+#  SetOutPath $INSTDIR\config\status
+ # File files\mcFiles\core\config\status\state-client.properties
   SetOutPath $INSTDIR
   File files\mcFiles\core\dump\*.*
   #other yosbr files lol
   SetOutPath $INSTDIR\config
-  File files\mcFiles\core\config\badoptimizations.txt
-  File files\mcFiles\core\config\bobby.conf
-  File files\mcFiles\core\config\*.json5
-  File files\mcFiles\core\config\*.json
+  #File files\mcFiles\core\config\badoptimizations.txt
+  #File files\mcFiles\core\config\bobby.conf
+  #File files\mcFiles\core\config\*.json5
+  #File files\mcFiles\core\config\*.json
   File files\mcFiles\core\config\*.properties
-  File files\mcFiles\core\config\*.toml
-  File files\mcFiles\core\config\*.cfg
+  #File files\mcFiles\core\config\*.toml
+  #File files\mcFiles\core\config\*.cfg
   DetailPrint "Options configured successfully."
   DetailPrint "Creating launcher installation..."
   #create the launcher Profile
