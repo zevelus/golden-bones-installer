@@ -253,7 +253,7 @@ SectionGroup "Rendering"
 
   # Nvidium (only works on newer nvidia graphics cards)
   Section /o "Nvidium" nvidium_section_id
-	  File files\mcFiles\optional\mods\nvidium-0.2.9-beta.jar
+	  File files\mcFiles\optional\mods\nvidium-0.3.1.jar
 	  DetailPrint "Nvidium installed."
   SectionEnd  
   
@@ -320,7 +320,7 @@ SectionGroup "UI"
 # NowPlaying
   Section /o "Now Playing"
     SectionInstType ${IT_FULL}
-    File files\mcFiles\optional\mods\now-playing-fabric-1.21-1.5.5.jar
+    File files\mcFiles\optional\mods\now-playing-fabric-1.21-1.5.6.jar
 	DetailPrint "NowPlaying installed."
   SectionEnd
   
