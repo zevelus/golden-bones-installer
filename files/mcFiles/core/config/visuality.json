@@ -1,0 +1,40 @@
+{
+  "slimeEnabled": true,
+  "slimeColor": {
+    "field_24364": 8978297
+  },
+  "chargeEnabled": false,
+  "sparkleEnabled": false,
+  "soulEnabled": false,
+  "waterCircles": {
+    "density": 10,
+    "radius": 16,
+    "enabled": false,
+    "colored": false
+  },
+  "hitParticlesEnabled": true,
+  "hitParticleEntries": [
+    "minecraft:skeleton/visuality:bone",
+    "minecraft:skeleton_horse/visuality:bone",
+    "minecraft:stray/visuality:bone",
+    "minecraft:wither_skeleton/visuality:wither_bone",
+    "minecraft:chicken/visuality:feather"
+  ],
+  "shinyArmorEnabled": false,
+  "shinyArmorEntries": [
+    "minecraft:golden_helmet",
+    "minecraft:golden_chestplate",
+    "minecraft:golden_leggings",
+    "minecraft:golden_boots",
+    "minecraft:diamond_helmet",
+    "minecraft:diamond_chestplate",
+    "minecraft:diamond_leggings",
+    "minecraft:diamond_boots"
+  ],
+  "shinyBlocksEnabled": false,
+  "shinyBlockEntries": [
+    "#minecraft:gold_ores",
+    "#minecraft:diamond_ores",
+    "#minecraft:emerald_ores"
+  ]
+}

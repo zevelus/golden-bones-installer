@@ -73,11 +73,8 @@ Function .onMouseOverSection
   StrCmp $0 2 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:Fabric is a modding platform for Minecraft. It is required to use mods."
   
-  StrCmp $0 3 "" +2
-    SendMessage $R0 ${WM_SETTEXT} 0 "STR:deez nuts"
-  
   StrCmp $0 4 "" +2
-    SendMessage $R0 ${WM_SETTEXT} 0 "STR:This is a collection of mods that are either required to connect to the Golden Bones server, or improve Minecraft without any drawbacks.$\nDeez"
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:This is a collection of mods that are either required to connect to the Golden Bones server, or improve Minecraft without any drawbacks."
 	
   StrCmp $0 5 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:These are mods that can increase chunk rendering performance, give extra control over how the world looks, or alter rendering in some other way."
@@ -86,10 +83,76 @@ Function .onMouseOverSection
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:Nvidium uses special technology to dramatically increase rendering performance. However, it only works on NVIDIA graphics cards from the 16xx series up.$\nDetected GPU:$\n$graphicsCard"
   
   StrCmp $0 7 "" +2
-    SendMessage $R0 ${WM_SETTEXT} 0 "STR:description not added yet sorry"
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Bobby saves renders of chunks to your computer temporarily, allowing you to load chunks not sent by the server. Basically it lets you have higher render distances."
 	
   StrCmp $0 8 "" +2
-    SendMessage $R0 ${WM_SETTEXT} 0 "STR:description not added yet sorry"
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:This mod adds some simple control sliders to your settings, allowing you to easily adjust how your fog looks."
+	
+  StrCmp $0 10 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:These mods tweak various aspects of the User Interface."
+	
+  StrCmp $0 11 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:This mod lets you customize the armor bar. You can add small animations, representations of your armor type, and more!"
+	
+  StrCmp $0 12 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:This mod is about giving you more information on your hunger. This lets you see your saturation, or optionally see the hunger values of foods."
+
+  StrCmp $0 13 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:BetterF3 completely overhauls the F3 Debug menu. You can customize what shows on this screen, color code sections, and more!"
+	
+  StrCmp $0 14 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:With this mod, you can customize the crosshair like never before. You can have the crosshair change depending on what its pointed at."
+	
+  StrCmp $0 15 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:AutoHUD allows almost every part of the HUD to be hidden based on the situation. It is highly customizable."
+
+  StrCmp $0 16 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Removes the resourcepack reload screen. Allows you to get back to playing much faster after changing recourcepacks."
+	
+  StrCmp $0 17 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Shows you what song is playing when it changes."
+	
+  StrCmp $0 19 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:These mods add small things that make the game feel a little more charming and immersive."
+	
+  StrCmp $0 20 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Visuality adds some customizable effects and particles, such as bones for hitting skeletons and slime when hitting slime. It is highly customizable."
+  
+  StrCmp $0 21 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:A very simple mod that adds an icon of players' heads in front of their username in the chat."
+  
+  StrCmp $0 22 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Simply add an animation to food items while you eat them. Very customizable, even with resourcepacks."
+	
+  StrCmp $0 24 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:These mods provide additional information and control over the game."
+  
+  StrCmp $0 25 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:An insanely customizable mod capable of providing loads of useful information in a togglable miniHUD."
+	
+  StrCmp $0 26 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Litematica lets you create and view schematics. Great for transfering builds from creative to survival."
+	
+  StrCmp $0 27 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:This mod allows you to take control over Minecraft's in game music. Choose tracks, skip, add music, and more!"
+	
+  StrCmp $0 28 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Spark is a powerful tool for analyzing various performance metrics in the game."
+	
+  StrCmp $0 29 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:This mod lets you see certain extra info about special blocks and items such as beehives and shulker boxes. This is highly customizable and all features can be disbaled."
+
+  StrCmp $0 30 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:This mod has additional features and functionality for the Tweakeroo mod, which is installed by default."
+	
+  StrCmp $0 32 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Other miscellaneous mods with cool features."
+	
+  StrCmp $0 33 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Quit your world and save it in the background while you use the menu, instead of having to wait for the save screen."
+	
+  StrCmp $0 34 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Allows you to record replays of sessions where you can later view them and even edit them into cinematics."
   
 FunctionEnd
 
@@ -227,7 +290,7 @@ SectionGroup "UI"
   
   # better F3
   Section /o "BetterF3 Menu"
-    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
+    SectionInstType ${IT_FULL} ${IT_SAMS}
     # define what to install and place it in the output path
     File files\mcFiles\optional\mods\BetterF3-11.0.2-Fabric-1.21.1.jar
 	DetailPrint "BetterF3 installed."
@@ -242,7 +305,7 @@ SectionGroup "UI"
   
   # autohud
   Section /o "AutoHUD"
-    SectionInstType ${IT_FULL}
+    SectionInstType ${IT_FULL} ${IT_SAMS}
     File files\mcFiles\optional\mods\autohud-7.2.1+1.21-fabric.jar
 	DetailPrint "AutoHUD installed."
   SectionEnd
@@ -315,7 +378,7 @@ SectionGroup "Utility and Control"
   
   # minihud
   Section /o "MiniHUD"
-    SectionInstType ${IT_FULL}
+    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
     # define what to install and place it in the output path
     File files\mcFiles\optional\mods\minihud-fabric-1.21-0.31.999-sakura.23.jar
 	DetailPrint "MiniHUD installed."
@@ -323,7 +386,7 @@ SectionGroup "Utility and Control"
   
   # litematica
   Section /o "Litematica"
-    SectionInstType ${IT_FULL}
+    SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
     File files\mcFiles\optional\mods\litematica-fabric-1.21-0.19.3-sakura.2.jar
 	DetailPrint "Litematica installed."
   SectionEnd
@@ -389,26 +452,24 @@ Section "-Config"
   SetOverwrite off
  # SetOutPath $INSTDIR\config\carpet
  # File files\mcFiles\core\config\carpet\default_carpet.conf
- # SetOutPath $INSTDIR\config\music_control
- # File files\mcFiles\core\config\music_control\*.json
-#  SetOutPath $INSTDIR\config\NoChatReports
- # File files\mcFiles\core\config\NoChatReports\NCR-Client.json
- # SetOutPath $INSTDIR\config\peek
-#  File files\mcFiles\core\config\peek\peek.properties
+  SetOutPath $INSTDIR\config\NoChatReports
+  File files\mcFiles\core\config\NoChatReports\NCR-Client.json
+  SetOutPath $INSTDIR\config\peek
+  File files\mcFiles\core\config\peek\peek.properties
   #SetOutPath $INSTDIR\config\respackopts
  # File files\mcFiles\core\config\respackopts\_respackopts.conf
-#  SetOutPath $INSTDIR\config\status
- # File files\mcFiles\core\config\status\state-client.properties
+  SetOutPath $INSTDIR\config\status
+  File files\mcFiles\core\config\status\state-client.properties
   SetOutPath $INSTDIR
   File files\mcFiles\core\dump\*.*
   #other yosbr files lol
   SetOutPath $INSTDIR\config
-  #File files\mcFiles\core\config\badoptimizations.txt
-  #File files\mcFiles\core\config\bobby.conf
-  #File files\mcFiles\core\config\*.json5
-  #File files\mcFiles\core\config\*.json
+  File files\mcFiles\core\config\badoptimizations.txt
+  File files\mcFiles\core\config\bobby.conf
+  File files\mcFiles\core\config\*.json5
+  File files\mcFiles\core\config\*.json
   File files\mcFiles\core\config\*.properties
-  #File files\mcFiles\core\config\*.toml
+  File files\mcFiles\core\config\*.toml
   #File files\mcFiles\core\config\*.cfg
   DetailPrint "Options configured successfully."
   DetailPrint "Creating launcher installation..."
