@@ -1,7 +1,10 @@
 {
+	"renderPosition": "BEFORE_NAME",
 	"offsetNonPlayerText": false,
 	"senderDetection": "UUID_AND_HEURISTIC",
 	"smartHeuristics": true,
-	"handleSystemMessages": true,
-	"nameAliases": { }
+	"handleSystemMessages": false,
+	"nameAliases": {
+		"Frostyznezz": "Zevelus"
+	}
 }

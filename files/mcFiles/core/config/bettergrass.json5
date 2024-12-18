@@ -1,26 +1,51 @@
 {
-	// General
-	// OFF/FAST/FANCY (default: FANCY)
-	betterGrassMode: "FANCY",
+	/* -> General
+	   OFF/FAST/FANCY (default: FANCY)
+	*/
+	"betterGrassMode": "FANCY",
+	/* Blocks
+	   (default: true)
+	*/
+	"grassBlocks": true,
 	// (default: true)
-	snowy: true,
-	// 
-	// Connected Blocks
+	"snowy": true,
 	// (default: true)
-	grassBlocks: true,
-	// (default: false)
-	dirtPaths: false,
-	// (default: false)
-	farmLands: false,
+	"dirtPaths": false,
 	// (default: true)
-	podzol: true,
+	"farmLands": false,
 	// (default: true)
-	mycelium: true,
+	"podzol": true,
 	// (default: true)
-	crimsonNylium: false,
+	"mycelium": true,
 	// (default: true)
-	warpedNylium: false,
-	// 
-	// Advanced
-	moreBlocks: []
+	"crimsonNylium": false,
+	// (default: true)
+	"warpedNylium": false,
+	"moreBlocks": [],
+	/* -> Better Snow
+	   OFF/OPTIFINE/LAMBDA (default: OPTIFINE)
+	*/
+	"betterSnowMode": "LAMBDA",
+	"snowLayers": [
+		"snow",
+		"moss_carpet",
+		"pale_moss_carpet"
+	],
+	"excludedTags": [
+		"buttons",
+		"doors",
+		"fire",
+		"leaves",
+		"pressure_plates",
+		"rails"
+	],
+	"excludedBlocks": [
+		"lantern[hanging]",
+		"redstone_wall_torch",
+		"soul_lantern[hanging]",
+		"soul_wall_torch",
+		"wall_torch"
+	],
+	"whitelistedTags": [],
+	"whitelistedBlocks": []
 }

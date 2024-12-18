@@ -3,7 +3,6 @@
   "debugOnRightClick": false,
   "renderModeChoice": "NORMAL",
   "vanillaModelHologramRenderMode_2": "OFF",
-  "attemptRevertingEntityModelsAlteredByAnotherMod": true,
   "modelExportMode": "NONE",
   "attemptPhysicsModPatch_2": "OFF",
   "modelUpdateFrequency": "Slow",
@@ -19,8 +18,11 @@
   "preventFirstPersonHandAnimating": false,
   "onlyClientPlayerModel": false,
   "doubleChestAnimFix": true,
-  "variationRequiresDefaultModel": true,
-  "resetPlayerModelEachRender": true,
+  "enforceOptifineVariationRequiresDefaultModel": true,
+  "resetPlayerModelEachRender": false,
   "onlyDebugRenderOnHover": false,
-  "enforceOptifineSubFoldersVariantOnly": true
+  "enforceOptifineSubFoldersVariantOnly": true,
+  "enforceOptiFineAnimSyntaxLimits": true,
+  "allowOptifineFallbackProperties": true,
+  "showReloadErrorToast": true
 }
