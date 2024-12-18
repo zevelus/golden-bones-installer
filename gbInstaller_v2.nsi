@@ -301,7 +301,7 @@ SectionGroup "UI"
   # dynamic crosshair
   Section /o "Dynamic Crosshair"
     SectionInstType ${IT_FULL}
-    File files\mcFiles\optional\mods\dynamiccrosshair-9.3+1.20.4-fabric.jar
+    File files\mcFiles\optional\mods\dynamiccrosshair-9.3+1.21.3-fabric.jar
 	DetailPrint "DynamicCrosshair installed."
   SectionEnd
   
