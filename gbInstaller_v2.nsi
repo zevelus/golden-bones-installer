@@ -1,3 +1,4 @@
+!include nsDialogs.nsh
 !include WinMessages.nsh
 !define SF_SELECTED   1
 !define SF_BOLD       8
@@ -190,10 +191,11 @@ InstallDir '$APPDATA\minecraftProfiles\instances\goldenBones\seasonFive'
 
 # show info page
 Page license
-
-
 LicenseText $licText "Continue"
 LicenseData files\installerAssets\about.rtf
+
+# nsDialogs custom page. 
+
 
 # choose components page
 Page components closeWarning componentShow
@@ -451,6 +453,9 @@ Section "-Config"
  # SetOutPath $INSTDIR\config\.puzzle_cache
   #File files\mcFiles\core\config\.puzzle_cache\mojangstudios.png
   SetOverwrite off
+  # copy options file from last version
+  SetOutPath $INSTDIR
+  CopyFiles /SILENT /FILESONLY $APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\options.txt $INSTDIR
  # SetOutPath $INSTDIR\config\carpet
  # File files\mcFiles\core\config\carpet\default_carpet.conf
   SetOutPath $INSTDIR\config\NoChatReports
