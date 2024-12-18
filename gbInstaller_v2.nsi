@@ -313,7 +313,7 @@ SectionGroup "UI"
    
   # rrls
   Section /o "Remove RP Reload Screen"
-    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS} RO
+    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
     File files\mcFiles\optional\mods\rrls.placeholder
 	DetailPrint "RRLS installed."
   SectionEnd
@@ -367,7 +367,7 @@ SectionGroup "Atmosphere and Charm"
   
   # Eating animation
   Section /o "Eating Animation"
-    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS} RO
+    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
     File files\mcFiles\optional\mods\eating-animation.placeholder
 	DetailPrint "Eating Animation installed."
   SectionEnd
@@ -394,7 +394,7 @@ SectionGroup "Utility and Control"
   
   # music control
   Section /o "Music Control"
-    SectionInstType ${IT_FULL} ${IT_SAMS} RO
+    SectionInstType ${IT_FULL} ${IT_SAMS}
     File files\mcFiles\optional\mods\music-control.placeholder
 	DetailPrint "MusicControl installed."
   SectionEnd
@@ -408,7 +408,7 @@ SectionGroup "Utility and Control"
   
   # peek
   Section /o "Peek"
-    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS} RO
+    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
     File files\mcFiles\optional\mods\peek.placeholder
 	DetailPrint "Peek installed."
   SectionEnd
@@ -427,7 +427,7 @@ SectionGroup "Misc"
 
   # fastquit
   Section /o "Fast Quit"
-    SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS} RO
+    SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
     File files\mcFiles\optional\mods\FastQuit.placeholder
 	DetailPrint "FastQuit installed."
   SectionEnd
