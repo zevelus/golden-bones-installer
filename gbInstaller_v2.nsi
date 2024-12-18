@@ -253,21 +253,21 @@ SectionGroup "Rendering"
 
   # Nvidium (only works on newer nvidia graphics cards)
   Section /o "Nvidium" nvidium_section_id
-	  File files\mcFiles\optional\mods\nvidium-0.3.1.jar
+	  File files\mcFiles\optional\mods\nvidium.placeholder
 	  DetailPrint "Nvidium installed."
   SectionEnd  
   
 # bobby
   Section "Bobby"
     SectionInstType ${IT_DEFA} ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\bobby-5.2.4+mc1.21.jar
+    File files\mcFiles\optional\mods\bobby-5.2.6+mc1.21.4.jar
 	DetailPrint "Bobby installed."
   SectionEnd
   
   # simple fog
   Section /o "Simple Fog Controls"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
-    File files\mcFiles\optional\mods\simplefog-1.6.0.jar
+    File files\mcFiles\optional\mods\simplefog-1.7.0.jar
 	DetailPrint "SimpleFog installed."
   SectionEnd
 SectionGroupEnd
@@ -277,14 +277,14 @@ SectionGroup "UI"
   # detail armor bar
   Section "Detailed Armor Bar"
     SectionInstType ${IT_DEFA} ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
-    File files\mcFiles\optional\mods\DetailArmorBar-2.6.3+1.21.1-fabric.jar
+    File files\mcFiles\optional\mods\DetailArmorBar-2.6.3+1.21.3-fabric.jar
 	DetailPrint "DetailArmorBar installed."
   SectionEnd
   
   # appleskin
   Section /o "Appleskin"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
-    File files\mcFiles\optional\mods\appleskin-fabric-mc1.21-3.0.5.jar
+    File files\mcFiles\optional\mods\appleskin-fabric-mc1.21.3-3.0.6.jar
 	DetailPrint "Appleskin installed."
   SectionEnd
   
@@ -292,35 +292,35 @@ SectionGroup "UI"
   Section /o "BetterF3 Menu"
     SectionInstType ${IT_FULL} ${IT_SAMS}
     # define what to install and place it in the output path
-    File files\mcFiles\optional\mods\BetterF3-11.0.2-Fabric-1.21.1.jar
+    File files\mcFiles\optional\mods\BetterF3-13.0.0-Fabric-1.21.4.jar
 	DetailPrint "BetterF3 installed."
   SectionEnd
   
   # dynamic crosshair
   Section /o "Dynamic Crosshair"
     SectionInstType ${IT_FULL}
-    File files\mcFiles\optional\mods\dynamiccrosshair-8.1+1.21-fabric.jar
+    File files\mcFiles\optional\mods\dynamiccrosshair-9.3+1.20.4-fabric.jar
 	DetailPrint "DynamicCrosshair installed."
   SectionEnd
   
   # autohud
   Section /o "AutoHUD"
     SectionInstType ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\autohud-7.2.1+1.21-fabric.jar
+    File files\mcFiles\optional\mods\autohud-8.0+1.21.3-fabric.jar
 	DetailPrint "AutoHUD installed."
   SectionEnd
    
   # rrls
   Section /o "Remove RP Reload Screen"
-    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\rrls-5.0.7+mc1.21-fabric.jar
+    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS} RO
+    File files\mcFiles\optional\mods\rrls.placeholder
 	DetailPrint "RRLS installed."
   SectionEnd
   
 # NowPlaying
   Section /o "Now Playing"
     SectionInstType ${IT_FULL}
-    File files\mcFiles\optional\mods\now-playing-fabric-1.21-1.5.6.jar
+    File files\mcFiles\optional\mods\now-playing-fabric-1.5.11+1.21.3.jar
 	DetailPrint "NowPlaying installed."
   SectionEnd
   
@@ -342,7 +342,9 @@ Function componentShow
   #if it is compatible
   nvidiaEnabled:
     SectionSetInstTypes ${nvidium_section_id} 31
-    IntOp $4 ${SF_BOLD} | ${SF_SELECTED}
+#	IntOp $4 ${SF_BOLD} | ${SF_SELECTED}
+# TEMPORARY CHANGE. the above line has been commented out and replaced with the below line. revert this intOp back to the commented version when nvidium is implemented.
+    IntOp $4 ${SF_BOLD} | ${SF_RO}
 	SectionSetFlags ${nvidium_section_id} $4
 FunctionEnd
 
@@ -353,21 +355,21 @@ SectionGroup "Atmosphere and Charm"
   # visuality
   Section /o "Visuality"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
-    File files\mcFiles\optional\mods\visuality-0.7.7+1.21.jar
+    File files\mcFiles\optional\mods\visuality-0.7.9+1.21.4.jar
 	DetailPrint "Visuality installed."
   SectionEnd
   
   # chat heads
   Section /o "Chat Heads"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
-    File files\mcFiles\optional\mods\chat_heads-0.12.10-fabric-1.21.jar
+    File files\mcFiles\optional\mods\chat_heads-0.13.8-fabric-1.21.4.jar
 	DetailPrint "ChatHeads installed."
   SectionEnd
   
   # Eating animation
   Section /o "Eating Animation"
-    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\eating-animation-1.21+1.9.72.jar
+    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS} RO
+    File files\mcFiles\optional\mods\eating-animation.placeholder
 	DetailPrint "Eating Animation installed."
   SectionEnd
   
@@ -380,42 +382,42 @@ SectionGroup "Utility and Control"
   Section /o "MiniHUD"
     SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
     # define what to install and place it in the output path
-    File files\mcFiles\optional\mods\minihud-fabric-1.21-0.31.999-sakura.23.jar
+    File files\mcFiles\optional\mods\minihud-fabric-1.21.4-0.34.0-sakura.3.jar
 	DetailPrint "MiniHUD installed."
   SectionEnd
   
   # litematica
   Section /o "Litematica"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
-    File files\mcFiles\optional\mods\litematica-fabric-1.21-0.19.3-sakura.2.jar
+    File files\mcFiles\optional\mods\litematica-fabric-1.21.4-0.21.0-sakura.8.jar
 	DetailPrint "Litematica installed."
   SectionEnd
   
   # music control
   Section /o "Music Control"
-    SectionInstType ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\music_control-1.8.3+1.21.jar
+    SectionInstType ${IT_FULL} ${IT_SAMS} RO
+    File files\mcFiles\optional\mods\music-control.placeholder
 	DetailPrint "MusicControl installed."
   SectionEnd
   
   # spark
   Section /o "Spark"
     SectionInstType ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\spark-1.10.97-fabric.jar
+    File files\mcFiles\optional\mods\spark-1.10.121-fabric.jar
 	DetailPrint "Spark installed."
   SectionEnd  
   
   # peek
   Section /o "Peek"
-    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\peek-fabric-1.21.1-1.3.5.jar
+    SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS} RO
+    File files\mcFiles\optional\mods\peek.placeholder
 	DetailPrint "Peek installed."
   SectionEnd
   
   # tweakermore
   Section /o "TweakerMore"
     SectionInstType ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\tweakermore-v3.20.1-mc1.21.jar
+    File files\mcFiles\optional\mods\tweakermore-v3.23.0-mc1.21.4.jar
 	DetailPrint "TweakerMore installed."
   SectionEnd
   
@@ -426,15 +428,15 @@ SectionGroup "Misc"
 
   # fastquit
   Section /o "Fast Quit"
-    SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
-    File files\mcFiles\optional\mods\fastquit-3.0.0+1.20.6.jar
+    SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS} RO
+    File files\mcFiles\optional\mods\FastQuit.placeholder
 	DetailPrint "FastQuit installed."
   SectionEnd
   
   # Replay mod
   Section /o "Replay Mod"
     SectionInstType ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\replaymod-1.21-2.6.17.jar
+    File files\mcFiles\optional\mods\replaymod-1.21.4-2.6.21.jar
 	DetailPrint "ReplayMod installed."
   SectionEnd
 
