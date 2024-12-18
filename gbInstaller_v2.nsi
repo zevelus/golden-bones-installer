@@ -225,12 +225,12 @@ SectionGroup "Dependencies"
   # set section type
   SectionInstType ${IT_DEFA} ${IT_PLUS} ${IT_FULL} ${IT_LITE} ${IT_SAMS} RO
   # check for fabric and install it
-  IfFileExists '$APPDATA\.minecraft\versions\fabric-loader-0.16.3-1.21.1\fabric-loader-0.16.3-1.21.1.json' skipFabric 0
+  IfFileExists '$APPDATA\.minecraft\versions\fabric-loader-0.16.9-1.21.4\fabric-loader-0.16.9-1.21.4.json' skipFabric 0
     DetailPrint "Latest Fabric version not found."
     DetailPrint "Installing Fabric..."
 	SetOutPath $TEMP\gbsInstaller
 	File files\dependencies\fabric-installer-1.0.1.exe
-    ExecWait 'javaw -jar "$TEMP\gbsInstaller\fabric-installer-1.0.1.exe" client -mcversion "1.21.1" -noprofile -dir "$APPDATA\.minecraft"'
+    ExecWait 'javaw -jar "$TEMP\gbsInstaller\fabric-installer-1.0.1.exe" client -mcversion "1.21.4" -noprofile -dir "$APPDATA\.minecraft"'
     Delete $TEMP\gbsInstaller\fabric-installer-1.0.1.exe
 	DetailPrint "Fabric installed."
   skipFabric:
@@ -478,7 +478,7 @@ Section "-Config"
   nsJSON::Quote '$INSTDIR'
   Pop $7
   nsJSON::Set "profiles" "golden-bones-seasonV" "gameDir" /value '$7'
-  nsJSON::Set "profiles" "golden-bones-seasonV" "lastVersionId" /value '"fabric-loader-0.16.3-1.21.1"'
+  nsJSON::Set "profiles" "golden-bones-seasonV" "lastVersionId" /value '"fabric-loader-0.16.9-1.21.4"'
   nsJSON::Set "profiles" "golden-bones-seasonV" "name" /value '"Golden Bones Season V"'
   # set the name of the old launcher profile
   nsJSON::Set "profiles" "golden-bones-season5" "name" /value '"Golden Bones Season V - 1.20.6"'
