@@ -252,9 +252,10 @@ SectionEnd
 SectionGroup "Rendering"
 
   # Nvidium (only works on newer nvidia graphics cards)
-  Section /o "Nvidium" nvidium_section_id
+  #TEMPORARY CHANGES TO THIS SECTION: the section title says not updated yet. the DetailPrint line for saying nvidium installed had been commented out.
+  Section /o "Nvidium - Not updated yet." nvidium_section_id
 	  File files\mcFiles\optional\mods\nvidium.placeholder
-	  DetailPrint "Nvidium installed."
+	  #DetailPrint "Nvidium installed."
   SectionEnd  
   
 # bobby
@@ -342,9 +343,7 @@ Function componentShow
   #if it is compatible
   nvidiaEnabled:
     SectionSetInstTypes ${nvidium_section_id} 31
-#	IntOp $4 ${SF_BOLD} | ${SF_SELECTED}
-# TEMPORARY CHANGE. the above line has been commented out and replaced with the below line. revert this intOp back to the commented version when nvidium is implemented.
-    IntOp $4 ${SF_BOLD} | ${SF_RO}
+	IntOp $4 ${SF_BOLD} | ${SF_SELECTED}
 	SectionSetFlags ${nvidium_section_id} $4
 FunctionEnd
 
