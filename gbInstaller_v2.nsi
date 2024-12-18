@@ -1,4 +1,3 @@
-!include nsDialogs.nsh
 !include WinMessages.nsh
 !define SF_SELECTED   1
 !define SF_BOLD       8
@@ -495,6 +494,12 @@ Section "-Config"
   nsJSON::Set "profiles" "golden-bones-seasonV" "type" /value '"custom"'
   nsJSON::Serialize /format /file '$APPDATA\.minecraft\launcher_profiles.json'
   DetailPrint "Launcher installation created and configured."
+  
+  #Prompt user if they'd like to create a desktop shortcut to the profile directory
+  MessageBox MB_USERICON|MB_YESNO|MB_TOPMOST|MB_DEFBUTTON1 "Would you like to create a desktop shortcut to this profile's .minecraft folder?" /SD IDYES IDNO noShortcut
+  CreateShortcut /NoWorkingDir "$DESKTOP\Golden Bones Folder.lnk" "$INSTDIR"
+  DetailPrint "Shortcut created."
+  noShortcut:
   
 SectionEnd
 
