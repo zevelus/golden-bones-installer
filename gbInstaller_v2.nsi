@@ -455,6 +455,11 @@ Section "-Config"
   # copy options file from last version
   SetOutPath $INSTDIR
   CopyFiles /SILENT /FILESONLY $APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\options.txt $INSTDIR
+  DetailPrint "Options copied."
+  CopyFiles /SILENT $APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\saves\* $INSTDIR\saves
+  DetailPrint "World saves copied."
+  CopyFiles /SILENT $APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\shaderpacks\ $INSTDIR\shaderpacks
+  DetailPrint "Shaders copied."
  # SetOutPath $INSTDIR\config\carpet
  # File files\mcFiles\core\config\carpet\default_carpet.conf
   SetOutPath $INSTDIR\config\NoChatReports
