@@ -244,6 +244,7 @@ Section "Essential Mods"
   SectionInstType ${IT_DEFA} ${IT_PLUS} ${IT_FULL} ${IT_LITE} ${IT_SAMS} RO
   DetailPrint "Installing essential mods..."
   SetOutPath $INSTDIR\mods
+  Delete $INSTDIR\mods\*.jar
   File files\mcFiles\core\mods\*.jar
   DetailPrint "Essential mods installed."
   DetailPrint "Checking for optional mods requested by the user..."
