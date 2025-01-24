@@ -1,0 +1,41 @@
+new optional mod: raised.
+
+updated mods need to change config
+
+autohud
+chat_heads
+craftPresence
+litematica
+peek
+rrls
+tweakermore
+
+
+re-added core mods
+
+better grassify
+continuity
+controlling
+enhanced block entities
+lamb dynamic lights
+modern fix
+paginated advancements
+searchables
+world edit
+
+updated core mods
+
+debugify
+entity texture features
+fabric api
+iris
+lithium
+malilib
+mod menu
+more culling
+not enough animations
+polytone
+reeses sodium options
+sodium
+status
+tweakeroo
