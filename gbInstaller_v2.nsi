@@ -3,17 +3,17 @@
 !define SF_BOLD       8
 !define SF_RO         16
 # Version Information
-VIAddVersionKey "ProductVersion" "2.0.0"
-VIAddVersionKey "FileVersion" "2.0.0"
-VIProductVersion "2.0.0.0"
-VIFileVersion "2.0.0.0"
+VIAddVersionKey "ProductVersion" "2.2.0"
+VIAddVersionKey "FileVersion" "2.2.0"
+VIProductVersion "2.2.0.0"
+VIFileVersion "2.2.0.0"
 
 Function .onInit
   Var /GLOBAL ver
   Var /GLOBAL fullVer
   Var /GLOBAL verString
   Var /GLOBAL newInstall
-  StrCpy $ver "2.0.0"
+  StrCpy $ver "2.2.0"
   StrCpy $fullVer "$ver.0"
   StrCpy $verString "Golden Bones Installer v$ver"
   
@@ -36,7 +36,7 @@ Function .onInit
   # if the installer was already installed
   sameVersion:
     StrCpy $newInstall "configure"
-    StrCpy $licText "Some Quick Info Before Configuring"
+    StrCpy $licText "Some Quick Info Before Reinstalling"
 	Return
   
   #if the installer has the wrong version
@@ -226,13 +226,13 @@ SectionGroup "Dependencies"
   # set section type
   SectionInstType ${IT_DEFA} ${IT_PLUS} ${IT_FULL} ${IT_LITE} ${IT_SAMS} RO
   # check for fabric and install it
-  IfFileExists '$APPDATA\.minecraft\versions\fabric-loader-0.16.9-1.21.4\fabric-loader-0.16.9-1.21.4.json' skipFabric 0
+  IfFileExists '$APPDATA\.minecraft\versions\fabric-loader-0.16.10-1.21.4\fabric-loader-0.16.10-1.21.4.json' skipFabric 0
     DetailPrint "Latest Fabric version not found."
     DetailPrint "Installing Fabric..."
 	SetOutPath $TEMP\gbsInstaller
-	File files\dependencies\fabric-installer-1.0.1.exe
-    ExecWait 'javaw -jar "$TEMP\gbsInstaller\fabric-installer-1.0.1.exe" client -mcversion "1.21.4" -noprofile -dir "$APPDATA\.minecraft"'
-    Delete $TEMP\gbsInstaller\fabric-installer-1.0.1.exe
+	File files\dependencies\fabric-installer-1.0.1.jar
+    ExecWait 'javaw -jar "$TEMP\gbsInstaller\fabric-installer-1.0.1.jar" client -mcversion "1.21.4" -noprofile -dir "$APPDATA\.minecraft"'
+    Delete $TEMP\gbsInstaller\fabric-installer-1.0.1.jar
 	DetailPrint "Fabric installed."
   skipFabric:
  SectionEnd
@@ -457,10 +457,15 @@ Section "-Config"
   SetOutPath $INSTDIR
   CopyFiles /SILENT /FILESONLY $APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\options.txt $INSTDIR
   DetailPrint "Options copied."
-  CopyFiles /SILENT $APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\saves\* $INSTDIR\saves
+  
+  #copy saves and shaders if the user wants
+  IfFileExists '$APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\' 0 noSaves
+  MessageBox MB_USERICON|MB_YESNO|MB_TOPMOST|MB_DEFBUTTON1 "Would you like to copy saves and shaderpacks from your 1.20.6 Golden Bones profile to your new one?" /SD IDYES IDNO noSaves
+  CopyFiles /SILENT '$APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\saves\*' $INSTDIR\saves
   DetailPrint "World saves copied."
-  CopyFiles /SILENT $APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\shaderpacks\ $INSTDIR\shaderpacks
+  CopyFiles /SILENT '$APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\shaderpacks\*' $INSTDIR\shaderpacks
   DetailPrint "Shaders copied."
+  noSaves:
  # SetOutPath $INSTDIR\config\carpet
  # File files\mcFiles\core\config\carpet\default_carpet.conf
   SetOutPath $INSTDIR\config\NoChatReports
@@ -489,7 +494,7 @@ Section "-Config"
   nsJSON::Quote '$INSTDIR'
   Pop $7
   nsJSON::Set "profiles" "golden-bones-seasonV" "gameDir" /value '$7'
-  nsJSON::Set "profiles" "golden-bones-seasonV" "lastVersionId" /value '"fabric-loader-0.16.9-1.21.4"'
+  nsJSON::Set "profiles" "golden-bones-seasonV" "lastVersionId" /value '"fabric-loader-0.16.10-1.21.4"'
   nsJSON::Set "profiles" "golden-bones-seasonV" "name" /value '"Golden Bones Season V"'
   # set the name of the old launcher profile
   nsJSON::Set "profiles" "golden-bones-season5" "icon" /value '"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAVFBMVEUAAADf39/IyMi7u7usrKy4uLglJSXc3Nw6Ojpubm7l5eXDw8NaWlrp6ek/Pz+goKCSkpKGhobAwMB5eXllZWVUVFR1dXVGRkbT09NJSUmQkJBiYmJ85oyaAAAAAXRSTlMAQObYZgAAAypJREFUWMOdl4Fy2yAQRDECY5BkKbYbp+3//2d3gXIG0pHLWtEkmuxj745gR/3VCVKtzhe81IGKvUdczucrCMMA2j0AV9VKa/2d39UAWv3Dn9sMOqvxr+sKQlO//Vge/o4yajtWSgTxB1x1Cax+QYBl8bEP4sc664mIaRIAn1BVB0lYHvDHBAKICm6Csp/IsIamBxeEePhHNUldAIggAPBSiH4XsICrqgEhlBqmCBC1hKvspDoCGq6/BbguA9fvh0h/D+gz/Fj880cPoFqAqAH4n42/B6iJPvzQE/wnCN/4Z5jxko0QUQVRJ1ga/5wWT1KV+hB+QYQ+P9fP/gMCAyzVLoz25KX9iOB/e++79Zu1e4IjQabQ5+/9fQYXCZ/LffGS/9BPAZDFBN5/Pt/OT2HrSx8u5+Xpnwue4Y+i3A/8+KVEYCfw+3wVe/q+cnSEtMZXzjDP1ljaeOWbekNShTVfs7G3s2yfA2tHMMZYfGnnYvv0obUnzLcJAC3+gQzGyvhGCNYa8Y8QNmsG/Mq8VjHgV7YQoAG/Qu9kT57UCGCzLxkGAHZDhnGCjvOfI8ENELS2BFgzRKAfs7sDkQgZ8T9+JtgsAAN9oN9p9OAD7plVCOJtv2OCPXXBZIJzxwQ5f2OC2UA6ZyCAetM/TcbucKMJlDpqhHzwK4c3ErCHPBWtVR2hLzpLAJwCXtxORtWE3r+ueF4BEP4+29gBSEH/HMbEqiEndsrEKYBh7rtVLYE3AcDLD3poHq7sV8bc4Ob6v5iAOgFQKQP4qW8NoVRBf/pr5BxxI6DOwMAC4OoB4uPiV5iC5j7abxqAloDlXAGkDvBCL7OfCfaZ70uxiuYDBPxBAEwdHwZyytu/EVkBKPpLETIFl56UAiDGt/ziNJqznusLAE+JwJPcQTkTOUX0ogKUCCGVICFAjX6dAUnzzEvyTylr8+/JlEIwAf0ZsN8sdjF3owDgZVapQBA6qwCs1bSblx6k6KH6F61DvJ7r8Ui570ZJAtHhmxXDb7hZmSIXfttPws4j4Sa7gC0M7g2/zGEzH9uuhMAxThABxyJgQweHlQ5EOw5ghKMAfwB88x37eh2YwgAAAABJRU5ErkJggg=="'
