@@ -258,7 +258,7 @@ SectionGroup "Rendering"
 
   # Nvidium (only works on newer nvidia graphics cards)
   #TEMPORARY CHANGES TO THIS SECTION: the section title says not updated yet. the DetailPrint line for saying nvidium installed had been commented out.
-  Section /o "Nvidium - Not available" nvidium_section_id
+  Section /o "Nvidium - Unavailable" nvidium_section_id
 	  File files\mcFiles\optional\mods\nvidium.placeholder
 	  #DetailPrint "Nvidium installed."
   SectionEnd  
@@ -317,9 +317,9 @@ SectionGroup "UI"
   SectionEnd
    
   # rrls
-  Section /o "Remove RP Reload Screen"
+  Section /o "Remove RP Reload Screen - Unavailable"
     SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\rrls-5.1.0+mc1.21.4-fabric.jar
+    File files\mcFiles\optional\mods\rrls.placeholder
 	DetailPrint "RRLS installed."
   SectionEnd
   
@@ -378,7 +378,7 @@ SectionGroup "Atmosphere and Charm"
   SectionEnd
   
   # Eating animation
-  Section /o "Eating Animation - Not available"
+  Section /o "Eating Animation - Unavailable"
     SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
     File files\mcFiles\optional\mods\eating-animation.placeholder
 	DetailPrint "Eating Animation installed."
@@ -405,7 +405,7 @@ SectionGroup "Utility and Control"
   SectionEnd
   
   # music control
-  Section /o "Music Control - Not available"
+  Section /o "Music Control - Unavailable"
     SectionInstType ${IT_FULL} ${IT_SAMS}
     File files\mcFiles\optional\mods\music-control.placeholder
 	DetailPrint "MusicControl installed."
@@ -438,7 +438,7 @@ SectionGroupEnd
 SectionGroup "Misc"
 
   # fastquit
-  Section /o "Fast Quit - Not available"
+  Section /o "Fast Quit - Unavailable"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
     File files\mcFiles\optional\mods\FastQuit.placeholder
 	DetailPrint "FastQuit installed."
