@@ -309,14 +309,14 @@ SectionGroup "UI"
   # autohud
   Section /o "AutoHUD"
     SectionInstType ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\autohud-8.0+1.21.3-fabric.jar
+    File files\mcFiles\optional\mods\autohud-8.2+1.21.3-fabric.jar
 	DetailPrint "AutoHUD installed."
   SectionEnd
    
   # rrls
-  Section /o "Remove RP Reload Screen - Not available"
+  Section /o "Remove RP Reload Screen"
     SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\rrls.placeholder
+    File files\mcFiles\optional\mods\rrls-5.1.0+mc1.21.4-fabric.jar
 	DetailPrint "RRLS installed."
   SectionEnd
   
@@ -363,7 +363,7 @@ SectionGroup "Atmosphere and Charm"
   # chat heads
   Section /o "Chat Heads"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
-    File files\mcFiles\optional\mods\chat_heads-0.13.8-fabric-1.21.4.jar
+    File files\mcFiles\optional\mods\chat_heads-0.13.10-fabric-1.21.4.jar
 	DetailPrint "ChatHeads installed."
   SectionEnd
   
@@ -383,14 +383,14 @@ SectionGroup "Utility and Control"
   Section /o "MiniHUD"
     SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
     # define what to install and place it in the output path
-    File files\mcFiles\optional\mods\minihud-fabric-1.21.4-0.34.0-sakura.3.jar
+    File files\mcFiles\optional\mods\minihud-fabric-1.21.4-0.34.3.jar
 	DetailPrint "MiniHUD installed."
   SectionEnd
   
   # litematica
   Section /o "Litematica"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
-    File files\mcFiles\optional\mods\litematica-fabric-1.21.4-0.21.0-sakura.8.jar
+    File files\mcFiles\optional\mods\litematica-fabric-1.21.4-0.21.1.jar
 	DetailPrint "Litematica installed."
   SectionEnd
   
@@ -409,16 +409,16 @@ SectionGroup "Utility and Control"
   SectionEnd  
   
   # peek
-  Section /o "Peek - Not available"
+  Section /o "Peek"
     SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\peek.placeholder
+    File files\mcFiles\optional\mods\peek-fabric-1.21.4-1.3.6.jar
 	DetailPrint "Peek installed."
   SectionEnd
   
   # tweakermore
   Section /o "TweakerMore"
     SectionInstType ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\tweakermore-v3.23.0-mc1.21.4.jar
+    File files\mcFiles\optional\mods\tweakermore-v3.24.0-mc1.21.4.jar
 	DetailPrint "TweakerMore installed."
   SectionEnd
   
