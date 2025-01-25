@@ -112,46 +112,49 @@ Function .onMouseOverSection
   StrCmp $0 17 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:Shows you what song is playing when it changes."
 	
-  StrCmp $0 19 "" +2
-    SendMessage $R0 ${WM_SETTEXT} 0 "STR:These mods add small things that make the game feel a little more charming and immersive."
+  StrCmp $0 18 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Raises the hotbar, (which is normally cut off) and allows you to move various UI elements around on your screen. It may cause conflicts with other mods and hasn't been thoroughly tested."
 	
   StrCmp $0 20 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:These mods add small things that make the game feel a little more charming and immersive."
+	
+  StrCmp $0 21 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:Visuality adds some customizable effects and particles, such as bones for hitting skeletons and slime when hitting slime. It is highly customizable."
   
-  StrCmp $0 21 "" +2
+  StrCmp $0 22 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:A very simple mod that adds an icon of players' heads in front of their username in the chat."
   
-  StrCmp $0 22 "" +2
+  StrCmp $0 23 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:Simply add an animation to food items while you eat them. Very customizable, even with resourcepacks."
 	
-  StrCmp $0 24 "" +2
+  StrCmp $0 25 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:These mods provide additional information and control over the game."
   
-  StrCmp $0 25 "" +2
+  StrCmp $0 26 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:An insanely customizable mod capable of providing loads of useful information in a togglable miniHUD."
 	
-  StrCmp $0 26 "" +2
+  StrCmp $0 27 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:Litematica lets you create and view schematics. Great for transfering builds from creative to survival."
 	
-  StrCmp $0 27 "" +2
+  StrCmp $0 28 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:This mod allows you to take control over Minecraft's in game music. Choose tracks, skip, add music, and more!"
 	
-  StrCmp $0 28 "" +2
+  StrCmp $0 29 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:Spark is a powerful tool for analyzing various performance metrics in the game."
 	
-  StrCmp $0 29 "" +2
+  StrCmp $0 30 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:This mod lets you see certain extra info about special blocks and items such as beehives and shulker boxes. This is highly customizable and all features can be disbaled."
 
-  StrCmp $0 30 "" +2
+  StrCmp $0 31 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:This mod has additional features and functionality for the Tweakeroo mod, which is installed by default."
 	
-  StrCmp $0 32 "" +2
+  StrCmp $0 33 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:Other miscellaneous mods with cool features."
 	
-  StrCmp $0 33 "" +2
+  StrCmp $0 34 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:Quit your world and save it in the background while you use the menu, instead of having to wait for the save screen."
 	
-  StrCmp $0 34 "" +2
+  StrCmp $0 35 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:Allows you to record replays of sessions where you can later view them and even edit them into cinematics."
   
 FunctionEnd
@@ -323,8 +326,15 @@ SectionGroup "UI"
 # NowPlaying
   Section /o "Now Playing"
     SectionInstType ${IT_FULL}
-    File files\mcFiles\optional\mods\now-playing-fabric-1.5.11+1.21.3.jar
+    File files\mcFiles\optional\mods\now-playing-fabric-1.5.12+1.21.3.jar
 	DetailPrint "NowPlaying installed."
+  SectionEnd
+  
+# Raised
+  Section /o "Raised - NEW"
+    SectionInstType ${IT_FULL}
+    File files\mcFiles\optional\mods\raised-fabric-1.21.3-4.0.1.jar
+	DetailPrint "Raised installed."
   SectionEnd
   
 SectionGroupEnd
