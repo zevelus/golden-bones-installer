@@ -1,0 +1,8 @@
+The Golden Bones Installer is almost entirely coded in NSIS.
+The main gbInstaller nsi file needs to be compiled by NSIS. (MakeNSISW)
+Additionally, a few plugins are required for compilation:
+ - inetc
+ - nsJSON
+
+If you've cloned this repository and installed NSIS with the required plugins,
+building should be as simple as selecting the nsi file to compile with NSIS.
