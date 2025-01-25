@@ -469,7 +469,7 @@ Section "-Config"
   DetailPrint "Options copied."
   
   #copy saves and shaders if the user wants
-  IfFileExists '$APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\' 0 noSaves
+  IfFileExists '$APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\options.txt' 0 noSaves
   MessageBox MB_USERICON|MB_YESNO|MB_TOPMOST|MB_DEFBUTTON1 "Would you like to copy saves and shaderpacks from your 1.20.6 Golden Bones profile to your new one?" /SD IDYES IDNO noSaves
   CopyFiles /SILENT '$APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\saves\*' $INSTDIR\saves
   DetailPrint "World saves copied."
@@ -517,6 +517,7 @@ Section "-Config"
   DetailPrint "Launcher installation created and configured."
   
   #Prompt user if they'd like to create a desktop shortcut to the profile directory
+  IfFileExists '$DESKTOP\Golden Bones Folder.lnk' 0 noShortcut
   MessageBox MB_USERICON|MB_YESNO|MB_TOPMOST|MB_DEFBUTTON1 "Would you like to create a desktop shortcut to this profile's .minecraft folder?" /SD IDYES IDNO noShortcut
   CreateShortcut /NoWorkingDir "$DESKTOP\Golden Bones Folder.lnk" "$INSTDIR"
   DetailPrint "Shortcut created."
