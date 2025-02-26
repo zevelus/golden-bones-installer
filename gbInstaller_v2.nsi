@@ -558,7 +558,10 @@ SectionEnd
 
 #successful install
 Function .onInstSuccess
+  #set version stored in registry to current version
   WriteRegStr HKEY_CURRENT_USER SOFTWARE\gbInstaller version $ver
+  #save installation data
+  
 FunctionEnd
 
 Function .onUserAbort
