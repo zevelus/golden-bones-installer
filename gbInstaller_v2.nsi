@@ -3,17 +3,17 @@
 !define SF_BOLD       8
 !define SF_RO         16
 # Version Information
-VIAddVersionKey "ProductVersion" "2.2.0"
-VIAddVersionKey "FileVersion" "2.2.0"
-VIProductVersion "2.2.0.0"
-VIFileVersion "2.2.0.0"
+VIAddVersionKey "ProductVersion" "2.3.0"
+VIAddVersionKey "FileVersion" "2.3.0"
+VIProductVersion "2.3.0.0"
+VIFileVersion "2.3.0.0"
 
 Function .onInit
   Var /GLOBAL ver
   Var /GLOBAL fullVer
   Var /GLOBAL verString
   Var /GLOBAL newInstall
-  StrCpy $ver "2.2.0"
+  StrCpy $ver "2.3.0"
   StrCpy $fullVer "$ver.0"
   StrCpy $verString "Golden Bones Installer v$ver"
   
