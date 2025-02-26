@@ -98,23 +98,24 @@ Function .onMouseOverSection
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:This mod is about giving you more information on your hunger. This lets you see your saturation, or optionally see the hunger values of foods."
 
   StrCmp $0 13 "" +2
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Raises the hotbar, (which is normally cut off) and allows you to move various UI elements around on your screen."
+
+
+  StrCmp $0 14 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:BetterF3 completely overhauls the F3 Debug menu. You can customize what shows on this screen, color code sections, and more!"
 	
-  StrCmp $0 14 "" +2
+  StrCmp $0 15 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:With this mod, you can customize the crosshair like never before. You can have the crosshair change depending on what its pointed at."
 	
-  StrCmp $0 15 "" +2
+  StrCmp $0 16 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:AutoHUD allows almost every part of the HUD to be hidden based on the situation. It is highly customizable."
 
-  StrCmp $0 16 "" +2
+  StrCmp $0 17 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:Removes the resourcepack reload screen. Allows you to get back to playing much faster after changing recourcepacks."
 	
-  StrCmp $0 17 "" +2
-    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Shows you what song is playing when it changes."
-	
   StrCmp $0 18 "" +2
-    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Raises the hotbar, (which is normally cut off) and allows you to move various UI elements around on your screen. It may cause conflicts with other mods and hasn't been thoroughly tested."
-	
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Shows you what song is playing when it changes."
+		
   StrCmp $0 20 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:These mods add small things that make the game feel a little more charming and immersive."
 	
@@ -294,6 +295,13 @@ SectionGroup "UI"
 	DetailPrint "Appleskin installed."
   SectionEnd
   
+  # Raised
+  Section /o "Raised"
+    SectionInstType ${IT_FULL}
+    File files\mcFiles\optional\mods\raised-fabric-1.21.3-4.0.1.jar
+	DetailPrint "Raised installed."
+  SectionEnd
+  
   # better F3
   Section /o "BetterF3 Menu"
     SectionInstType ${IT_FULL} ${IT_SAMS}
@@ -329,13 +337,6 @@ SectionGroup "UI"
     SectionInstType ${IT_FULL}
     File files\mcFiles\optional\mods\now-playing-fabric-1.5.13+1.21.4.jar
 	DetailPrint "NowPlaying installed."
-  SectionEnd
-  
-# Raised
-  Section /o "Raised"
-    SectionInstType ${IT_FULL}
-    File files\mcFiles\optional\mods\raised-fabric-1.21.3-4.0.1.jar
-	DetailPrint "Raised installed."
   SectionEnd
   
 SectionGroupEnd
