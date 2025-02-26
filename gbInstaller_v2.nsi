@@ -101,10 +101,10 @@ Function .onMouseOverSection
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:Raises the hotbar, (which is normally cut off) and allows you to move various UI elements around on your screen."
 	
   StrCmp $0 14 "" +2
-    SendMessage $R0 ${WM_SETTEXT} 0 "STR:TIA"
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Adds a very small animation to items in the inventory. When you select an item, it will be slightly bigger. This is already a feature in Bedrock Edition."
 
    StrCmp $0 15 "" +2
-    SendMessage $R0 ${WM_SETTEXT} 0 "STR:ITEM HIGHLIGHTER"
+    SendMessage $R0 ${WM_SETTEXT} 0 "STR:Quickly find new items by showing an animated star on all newly picked-up items."
 
   StrCmp $0 16 "" +2
     SendMessage $R0 ${WM_SETTEXT} 0 "STR:BetterF3 completely overhauls the F3 Debug menu. You can customize what shows on this screen, color code sections, and more!"
@@ -308,14 +308,14 @@ SectionGroup "UI"
   SectionEnd
   
   # TIA
-  Section /o "Tiny Item Animations"
+  Section /o "NEW - Tiny Item Animations"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
     File files\mcFiles\optional\mods\tia-fabric-1.21.3-1.2.2.jar
 	DetailPrint "TIA installed."
   SectionEnd
   
   # Item Highlighter
-  Section /o "Item Highlighter"
+  Section /o "NEW - Item Highlighter"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
     File files\mcFiles\optional\mods\Highlighter-1.21.4-fabric-1.1.11.jar
 	File files\mcFiles\optional\mods\Iceberg-1.21.4-fabric-1.2.13.jar
