@@ -273,7 +273,7 @@ SectionGroup "Rendering"
   # simple fog
   Section /o "Simple Fog Controls"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
-    File files\mcFiles\optional\mods\simplefog-1.7.0.jar
+    File files\mcFiles\optional\mods\simplefog-1.7.1.jar
 	DetailPrint "SimpleFog installed."
   SectionEnd
 SectionGroupEnd
@@ -317,21 +317,22 @@ SectionGroup "UI"
   SectionEnd
    
   # rrls
-  Section /o "Remove RP Reload Screen - Unavailable"
+  Section /o "Remove RP Reload Screen"
     SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\rrls.placeholder
+    File files\mcFiles\optional\mods\rrls-5.1.1+mc1.21.4-fabric.jar
+	File files\mcFiles\optional\mods\ForgeConfigAPIPort-v21.4.1-1.21.4-Fabric.jar
 	DetailPrint "RRLS installed."
   SectionEnd
   
 # NowPlaying
   Section /o "Now Playing"
     SectionInstType ${IT_FULL}
-    File files\mcFiles\optional\mods\now-playing-fabric-1.5.12+1.21.3.jar
+    File files\mcFiles\optional\mods\now-playing-fabric-1.5.13+1.21.4.jar
 	DetailPrint "NowPlaying installed."
   SectionEnd
   
 # Raised
-  Section /o "Raised - NEW"
+  Section /o "Raised"
     SectionInstType ${IT_FULL}
     File files\mcFiles\optional\mods\raised-fabric-1.21.3-4.0.1.jar
 	DetailPrint "Raised installed."
@@ -373,7 +374,7 @@ SectionGroup "Atmosphere and Charm"
   # chat heads
   Section /o "Chat Heads"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
-    File files\mcFiles\optional\mods\chat_heads-0.13.11-fabric-1.21.4.jar
+    File files\mcFiles\optional\mods\chat_heads-0.13.13-fabric-1.21.4.jar
 	DetailPrint "ChatHeads installed."
   SectionEnd
   
@@ -405,9 +406,9 @@ SectionGroup "Utility and Control"
   SectionEnd
   
   # music control
-  Section /o "Music Control - Unavailable"
+  Section /o "Music Control"
     SectionInstType ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\music-control.placeholder
+    File files\mcFiles\optional\mods\music_control-1.9+1.21.4.jar
 	DetailPrint "MusicControl installed."
   SectionEnd
   
@@ -421,7 +422,7 @@ SectionGroup "Utility and Control"
   # peek
   Section /o "Peek"
     SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\peek-fabric-1.21.4-1.3.6.jar
+    File files\mcFiles\optional\mods\peek-fabric-1.21.4-1.4.1.jar
 	DetailPrint "Peek installed."
   SectionEnd
   
@@ -438,9 +439,9 @@ SectionGroupEnd
 SectionGroup "Misc"
 
   # fastquit
-  Section /o "Fast Quit - Unavailable"
+  Section /o "Fast Quit"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
-    File files\mcFiles\optional\mods\FastQuit.placeholder
+    File files\mcFiles\optional\mods\fastquit-3.0.0+1.21.4.jar
 	DetailPrint "FastQuit installed."
   SectionEnd
   
