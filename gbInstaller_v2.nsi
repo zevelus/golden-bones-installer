@@ -450,7 +450,7 @@ SectionGroup "Utility and Control"
   # tweakermore
   Section /o "TweakerMore"
     SectionInstType ${IT_FULL} ${IT_SAMS}
-    File files\mcFiles\optional\mods\tweakermore-v3.24.0-mc1.21.4.jar
+    File files\mcFiles\optional\mods\tweakermore-v3.24.1-mc1.21.4.jar
 	DetailPrint "TweakerMore installed."
   SectionEnd
   
