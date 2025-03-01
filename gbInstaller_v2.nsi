@@ -240,7 +240,7 @@ SectionGroup "Dependencies"
     DetailPrint "Installing Fabric..."
 	SetOutPath $TEMP\gbsInstaller
 	File files\dependencies\fabric-installer-1.0.1.jar
-    ExecWait 'javaw -jar "$TEMP\gbsInstaller\fabric-installer-1.0.1.jar" client -mcversion "1.21.4" -noprofile -dir "$APPDATA\.minecraft"'
+    ExecWait '"$PROGRAMFILES64\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin\javaw.exe" -jar "$TEMP\gbsInstaller\fabric-installer-1.0.1.jar" client -mcversion "1.21.4" -noprofile -dir "$APPDATA\.minecraft"'
     Delete $TEMP\gbsInstaller\fabric-installer-1.0.1.jar
 	DetailPrint "Fabric installed."
   skipFabric:
