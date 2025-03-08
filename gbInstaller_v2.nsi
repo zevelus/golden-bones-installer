@@ -422,7 +422,7 @@ SectionGroup "Utility and Control"
   # litematica
   Section /o "Litematica"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
-    File files\mcFiles\optional\mods\litematica-fabric-1.21.4-0.21.1.jar
+    File files\mcFiles\optional\mods\litematica-fabric-1.21.4-0.21.2.jar
 	DetailPrint "Litematica installed."
   SectionEnd
   
