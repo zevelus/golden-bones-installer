@@ -415,7 +415,7 @@ SectionGroup "Utility and Control"
   Section /o "MiniHUD"
     SectionInstType ${IT_PLUS} ${IT_FULL} ${IT_SAMS}
     # define what to install and place it in the output path
-    File files\mcFiles\optional\mods\minihud-fabric-1.21.4-0.34.3.jar
+    File files\mcFiles\optional\mods\minihud-fabric-1.21.4-0.34.4.jar
 	DetailPrint "MiniHUD installed."
   SectionEnd
   
