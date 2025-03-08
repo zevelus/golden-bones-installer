@@ -395,7 +395,7 @@ SectionGroup "Atmosphere and Charm"
   # chat heads
   Section /o "Chat Heads"
     SectionInstType ${IT_FULL} ${IT_PLUS} ${IT_SAMS}
-    File files\mcFiles\optional\mods\chat_heads-0.13.13-fabric-1.21.4.jar
+    File files\mcFiles\optional\mods\chat_heads-0.13.14-fabric-1.21.4.jar
 	DetailPrint "ChatHeads installed."
   SectionEnd
   
