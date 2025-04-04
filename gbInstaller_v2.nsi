@@ -488,6 +488,7 @@ Section "-Config"
   SetOverwrite off
   # copy options file from last version
   IfFileExists '$APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\options.txt' 0 noSaves
+  IfFileExists '$APPDATA\minecraftProfiles\instances\goldenBones\seasonFive\options.txt' noSaves 0
   SetOutPath $INSTDIR
   CopyFiles /SILENT /FILESONLY $APPDATA\minecraftProfiles\instances\goldenBones\gbsV_1206_v1\options.txt $INSTDIR
   DetailPrint "Options copied."
