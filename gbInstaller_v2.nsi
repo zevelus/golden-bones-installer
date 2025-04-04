@@ -235,12 +235,12 @@ SectionGroup "Dependencies"
   # set section type
   SectionInstType ${IT_DEFA} ${IT_PLUS} ${IT_FULL} ${IT_LITE} ${IT_SAMS} RO
   # check for fabric and install it
-  IfFileExists '$APPDATA\.minecraft\versions\fabric-loader-0.16.10-1.21.4\fabric-loader-0.16.10-1.21.4.json' skipFabric 0
+  IfFileExists '$APPDATA\.minecraft\versions\fabric-loader-0.16.12-1.21.5\fabric-loader-0.16.12-1.21.5.json' skipFabric 0
     DetailPrint "Latest Fabric version not found."
     DetailPrint "Installing Fabric..."
 	SetOutPath $TEMP\gbsInstaller
 	File files\dependencies\fabric-installer-1.0.1.jar
-    ExecWait '"$PROGRAMFILES64\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin\javaw.exe" -jar "$TEMP\gbsInstaller\fabric-installer-1.0.1.jar" client -mcversion "1.21.4" -noprofile -dir "$APPDATA\.minecraft"'
+    ExecWait '"$PROGRAMFILES64\Eclipse Adoptium\jdk-21.0.6.7-hotspot\bin\javaw.exe" -jar "$TEMP\gbsInstaller\fabric-installer-1.0.1.jar" client -mcversion "1.21.5" -noprofile -dir "$APPDATA\.minecraft"'
     Delete $TEMP\gbsInstaller\fabric-installer-1.0.1.jar
 	DetailPrint "Fabric installed."
   skipFabric:
@@ -529,7 +529,7 @@ Section "-Config"
   nsJSON::Quote '$INSTDIR'
   Pop $7
   nsJSON::Set "profiles" "golden-bones-seasonV" "gameDir" /value '$7'
-  nsJSON::Set "profiles" "golden-bones-seasonV" "lastVersionId" /value '"fabric-loader-0.16.10-1.21.4"'
+  nsJSON::Set "profiles" "golden-bones-seasonV" "lastVersionId" /value '"fabric-loader-0.16.12-1.21.5"'
   nsJSON::Set "profiles" "golden-bones-seasonV" "name" /value '"Golden Bones Season V"'
   nsJSON::Set "profiles" "golden-bones-seasonV" "icon" /value '"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACBUExURUdwTPfvUggxMffme+/FAM7WAELv1vfWAPf3ITHmxffvMffWEAhSQu/mnO/mxWPv3oRzGe/m5ilKQoRSGVLFrSnFnITm5hmca0KlnITexRl7a2NaEBmEjBmljIRzWmNCEGPO3lpCQqXm797vEGOlnFrvrYRSWqVzGWN7WmOEnK21zijRWRUAAAABdFJOUwBA5thmAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD70lEQVRYw6VXiZbiNhCUkC255fHFOTAHk2Q32c3/f2CqWz7kY8CQNjDzeFS5+lRbqdYymJra5gWXWmNZa+NvXzab7UqGRQKGn0Cwnf3cOTfD60L7MQFDT++nzVQD0Hk+pgBcN01T+Gzi/7+vl/fTb7gRw/PcF4YpYnxpitLoWAF7f4GAy+UUxwF4401jtM5dkgwEjTGMz8YRBAMUbDeRAibQBaz0SdIyZJkvmqJsykkMEILN++l9lEn23xSFNqbQbiBgFyBrmkWOwuXXNs6CEJSlaUDiOgZOn5bXjGE7qySOodYg8PmIoDM/0zCtAidZ1J7/DgRatwRmrOFtV1/f5gSdLSiYeAGC+o9v8X0UU8alaTpnqD/BsIxP+OoLAWjwdBRjBbtlfLCxe4Ehrqd6Bwnf3H+ObxnidLKAXYzX/e2VSha6WhjMwFD/XQ8xkAQO+GUTBm86hjgL8+B/y4C2MqGzP3f/dDHA3fUKPDNIWYXWfqvrz+v4/sltPEofGiBBw42Xze5aX3fcDqEp5PMOHj8SBg0nMkG1k5Xh4f+bw1UQafqXLgxrqCpLlmHyCh9rZnRbUYiDpT8rsudNmKNR8a5jgAYisng77yV8TqmHGKCBqvNPojA91uOjzmINZO+m7yaDtfQ4PmbYW3oCryj24gm8shFD9gReIXYtg9cLq8Magr0dsvkEA9k9xV48ineS/ypMGP04g3OWvrgCAkM3IB7Aa6IPaYTgxTDmVuJdbhFE6aQn4uAczk6iV6Cr4EX6EIPj5kUMDuyCDfXAgfArGXiHyEVBxZk4dhqEYAVFOH+ShCwUHGWcEKl7gZCJHc1vNA8UcAx5KlqrbjO43Ptclsdo+nMpE18oJ1I3GRC0psHilccEjuwH7n6UKFI7IJaTkWDiYopj7cmj0xMKOAvgoI+DVVOGmCbJsXIZLKq5zuX8C0c/0bkSD+hHUCCLyNI6lGBP1U1Z8u4ngQjzi7tR8lh9dQSRBq2HqkiyUhclzIQ4tPMPWThyHR3Ox56gZzAlr+ZZ7wLu7XEaYmXX/fxFHVR8LokXkwVCYzE2PYEsjkBDgkE0uvlJg1mKhjV3ZoF92fRPBwkYvGHjYugHOMu3/OZsjGe9aUooHh4vEk6k96EQ+gEuhcRZ5Iocx8BrmCl1FpUCRJSFF7xTsQtVxa9Bf8iCxxNKhFdJEBE2wH4qH84WVczVGBGgKb2MejN6QGI3Ouunsj1WkoIhBuw/HheCiFlFJyO8VJKMlI8DRSlApopQS+n9g4GOe+7HIYsyXQu9Di+lxCPhPFQBh7D0a/Gch689ve4P0RMmp1Fyma48X/f7qI6fOB6lkNX/YCC6J+A/sas/f2s3ypsAAAAASUVORK5CYII="'
   nsJSON::Set "profiles" "golden-bones-seasonV" "javaArgs" /value '"-Xms6G -Xmx6G -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -XX:+UseVectorCmov -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:ThreadPriorityPolicy=1 -XX:AllocatePrefetchStyle=3 -XX:+UseG1GC -XX:MaxGCPauseMillis=37 -XX:+PerfDisableSharedMem -XX:G1HeapRegionSize=16M -XX:G1NewSizePercent=23 -XX:G1ReservePercent=20 -XX:SurvivorRatio=32 -XX:G1MixedGCCountTarget=3 -XX:InitiatingHeapOccupancyPercent=10 -XX:G1RSetUpdatingPauseTimePercent=0 -XX:MaxTenuringThreshold=1 -XX:G1SATBBufferEnqueueingThresholdPercent=30 -XX:G1ConcMarkStepDurationMillis=5.0 -XX:G1ConcRSHotCardLimit=16 -XX:G1ConcRefinementServiceIntervalMillis=150 -XX:GCTimeRatio=99"'
